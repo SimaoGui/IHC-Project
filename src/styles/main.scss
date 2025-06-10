@@ -3,7 +3,7 @@
 @import './core/_typography.scss';
 @import './core/_reset.scss';
 
-@import './components/buttons';
+@import './components/_buttons.scss';
 
 div#root {
     display: flex;

@@ -17,8 +17,6 @@ const Form = () => {
         }
     }
 
-
-
     return (
         <React.Fragment>
             <section className={styles.formWrapper}>
@@ -33,7 +31,7 @@ const Form = () => {
                         <input value={senha} onChange={(e) => setSenha(e.target.value)} type="password" placeholder='Insira sua senha...'/>
                     </div>
                     <div className={styles.formItemsR}>
-                        <a href="/cadastro">Cadastrar-se!</a>
+                        <a href="/IHC-Project/register">Cadastrar-se!</a>
                         <a href="#">Esqueci minha senha</a>
                     </div>
                     <button type='button' className={`${styles} btn btn--primary`} onClick={handleCheck}>Logar</button>

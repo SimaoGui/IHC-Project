@@ -23,6 +23,12 @@ const App = () => {
             <Form/>
             <Footer/>
           </React.Fragment>} />
+        <Route path="/register" element={
+          <React.Fragment>
+            <Header/>
+            <Form/>
+            <Footer/>
+          </React.Fragment>} />
 
         <Route path="/ajuda" element={<div>Ajuda...</div>} />
         <Route path="/viagens" element={<div>Minhas Viagens...</div>} />

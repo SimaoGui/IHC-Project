@@ -32,7 +32,7 @@ const Header = () => {
                 <section className={styles.navTop}>
                     <div className={styles.logoDiv}>
                         <h1>
-                            <a href="/home">Viagem.com</a>
+                            <a href="/IHC-Project/home">Viagem.com</a>
                         </h1>
                     </div>
                     <ul className={styles.navbarItems}>
