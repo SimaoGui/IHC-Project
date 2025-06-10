@@ -1,16 +1,16 @@
 @import '../../styles/main.scss';
 
 main {
-    height: 65vh;    
+    height: 80vh;    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2.5rem;
 
     & h4 {
         position: absolute;
-        top: 105px;
+        top: 100px;
         left: 25px;
     }
 
@@ -122,7 +122,7 @@ main {
 
     & .promoDiv {
         width: 50%;
-        height: 25vh;
+        height: 30vh;
         display: flex;
         align-items: center;
         justify-content: center;

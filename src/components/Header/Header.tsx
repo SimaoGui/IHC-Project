@@ -7,19 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
-    const [id, setId] = useState(0)
-
-    const handleClick1 = () => {
-        setId(1)
-    }
-
-    const handleClick2 = () => {
-        setId(2)
-    }
-
-    const handleClick3 = () => {
-        setId(3)
-    }
+    const [id, setId] = useState<number>(0)
 
     const handleNavigate = () => {
         if (id === 1) {
@@ -47,17 +35,17 @@ const Header = () => {
                     </div>
                     <ul className={styles.navbarItems}>
                         <li className={styles.navbarItem}
-                        onClick={handleClick1}>
+                        onClick={() => setId(1)}>
                             <FaRegCircleQuestion className={styles.navIcon} />
                             <h3>Ajuda</h3>
                         </li>
                         <li className={styles.navbarItem}
-                         onClick={handleClick2}>
+                         onClick={() => setId(2)}>
                             <FaSuitcaseRolling className={styles.navIcon} />
                             <h3>Minhas Viagens</h3>
                         </li>
                         <li className={styles.navbarItem}
-                         onClick={handleClick3}>
+                         onClick={() => setId(3)}>
                             <FaUserCircle className={styles.navIcon} />
                             <h3>Entrar</h3>
                         </li>
@@ -65,13 +53,13 @@ const Header = () => {
                 </section>
                 <section className={styles.navDown}>
                     <div className={styles.navdownDiv}>
-                        <h2>Hospedagens</h2>
+                        <h4>Hospedagens</h4>
                     </div>
                     <div className={styles.navdownDiv}>
-                        <h2>Pacotes</h2>
+                        <h4>Pacotes</h4>
                     </div>
                     <div className={styles.navdownDiv}>
-                        <h2>Passagens Aéreas</h2>
+                        <h4>Passagens Aéreas</h4>
                     </div>
                 </section>
             </nav>
