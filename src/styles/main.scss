@@ -3,6 +3,8 @@
 @import './core/_typography.scss';
 @import './core/_reset.scss';
 
+@import './components/buttons';
+
 div#root {
     display: flex;
     flex-direction: column;
@@ -16,7 +18,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-h4, p, ul, li, span, a {
+h4, p, ul, li, label, span, a {
     font-family: $text-font;
     font-weight: 400;
     text-align: justify;

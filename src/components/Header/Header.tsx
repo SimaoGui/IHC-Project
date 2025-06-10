@@ -9,19 +9,21 @@ const Header = () => {
     const navigate = useNavigate();
     const [id, setId] = useState<number>(0)
 
-    const handleNavigate = () => {
-        if (id === 1) {
-            navigate('/ajuda');
-        } else if ( id === 2) {
-            navigate('/viagens')
-        } else if (id === 3) {
-            navigate('/login')
-        }
-    }
 
     useEffect(() => {
+        const handleNavigate = () => {
+            if (id === 1) {
+                navigate('/ajuda');
+            } else if ( id === 2) {
+                navigate('/viagens')
+            } else if (id === 3) {
+                navigate('/login')
+            }
+        }
+
         handleNavigate();
-    });
+
+    }, [id, navigate]);
     
 
     return (

@@ -1,12 +1,9 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
 import styles from './Homepage.module.scss';
 
 function Homepage() {
   return (
     <React.Fragment>
-        <Header/>
         <main>
           <h4>Pagina Inicial / Pacotes</h4>
           <div className={styles.pesquisaDiv}>
@@ -30,7 +27,6 @@ function Homepage() {
             </div>
           </div>
         </main>
-        <Footer/>
     </React.Fragment>
   )
 }
