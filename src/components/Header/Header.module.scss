@@ -1,0 +1,117 @@
+@import '../../styles/main.scss';
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    & .navTop {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        & .logoDiv {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & h1 {
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+            }
+        }
+
+        & .navbarItems {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 40%;
+
+            & > .navbarItem:nth-child(2) {
+                border-right: 1px solid $primary-color;
+                border-left: 1px solid $primary-color;
+            }
+
+            & .navbarItem {
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                height: auto;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all .2s ease;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                
+                &:hover > h3 {
+                    color: $primary-color;
+                    transform: translateY(-2px);
+                }
+                
+                & .navIcon {
+                    color: $primary-color;
+                    font-size: 1.5rem;
+                }
+
+                & h3 {
+                    padding: .5rem;
+                    text-align: center;
+                    font-weight: 500;
+                    transition: all .2s ease;
+                }
+            }
+        }
+    }
+
+    & .navDown {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        background-color: $primary-color;
+        
+        & .navdownDiv {
+            padding: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            & h2 {
+                font-weight: 500;
+                color: $background-color;
+                cursor: pointer;
+                transition: all .2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

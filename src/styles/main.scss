@@ -1,0 +1,26 @@
+
+@import './core/_colors.scss';
+@import './core/_typography.scss';
+@import './core/_reset.scss';
+
+div#root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;   
+}
+
+h1, h2, h3 {
+    font-family: $title-font;
+    font-weight: 700;
+    text-align: center;
+}
+
+h4, p, ul, li, span, a {
+    font-family: $text-font;
+    font-weight: 400;
+    text-align: justify;
+}
+body {
+    height: 100%;
+}

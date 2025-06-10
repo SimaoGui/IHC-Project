@@ -1,0 +1,127 @@
+@import '../../styles/main.scss';
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $card-color;  
+    gap: 2rem;
+    padding: 2rem;
+
+    & .footSect {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+
+        & .sectDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+
+                & h3 {
+                    text-align: left;
+                    color: $primary-color; 
+                    transition: all .3s ease;    
+                }
+
+                & li {
+                    cursor: pointer;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        color: $primary-color;
+                        transform: translateX(3px);
+                    }
+                }
+            }
+        }
+
+        & .sectIcons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+
+            & h3 {
+                color: $primary-color;
+            }
+            
+            & .iconsDiv{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: .5rem;
+
+                & .icons {
+                    align-self: center;
+                    font-size: 2rem;
+                    margin: .5rem;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        & .lastDiv {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            & h3 {
+                text-align: left;
+            }
+
+            & h4 {
+                text-align: left;
+            }
+
+            div {
+                display: flex;
+                margin-top: .5rem;
+                gap: .5rem;
+
+                & input {
+                    outline: none;
+                    padding: .25rem;
+                    border: none;
+                    border-radius: .5rem;
+                    width: 80%;
+                }
+
+                & button {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    color: $primary-color;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    
+                    &:hover {
+                        transform:  scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
