@@ -3,19 +3,27 @@ import styles from './Form.module.scss'
 import React, { useState } from 'react'
 
 const Form = () => {
-    const [email, setEmail] = useState<string>('')
-    const [senha, setSenha] = useState<string>('')
-    const correctEmail = 'user@gmail.com'
-    const correctSenha = 'User@123'
+    const [email, setEmail] = useState<string>('');
+    const [senha, setSenha] = useState<string>('');
     const navigate = useNavigate();
 
     const handleCheck = () => {
+        const correctEmail = sessionStorage.getItem('registeredEmail');
+        const correctSenha = sessionStorage.getItem('registeredPassword');
+
+        if (!correctEmail || !correctSenha) {
+            alert('Nenhum usuário cadastrado. Por favor, cadastre-se primeiro.');
+            return;
+        }
+
         if (email === correctEmail && senha === correctSenha) {
-            navigate('/home')
+            navigate('/home');
+            alert('Login efetuado com sucesso!');
         } else {
-            alert('Usuário ou Senha incorretos')
+            alert('Usuário ou Senha incorretos');
         }
     }
+
 
     return (
         <React.Fragment>

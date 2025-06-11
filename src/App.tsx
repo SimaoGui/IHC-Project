@@ -5,7 +5,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Form from "./pages/Form/Form"
-import Register from "./pages/Register/Register";
+import RegisterForm from "./pages/Register/Register";
 
 const App = () => {
 
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/register" element={
           <React.Fragment>
             <Header/>
-            <Register/>
+            <RegisterForm/>
             <Footer/>
           </React.Fragment>} />
 
