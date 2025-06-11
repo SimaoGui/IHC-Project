@@ -1,32 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Header.module.scss'
 import { FaRegCircleQuestion, FaSuitcaseRolling } from 'react-icons/fa6';
 import { FaUserCircle } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-    const navigate = useNavigate();
-    const [id, setId] = useState<number>(0)
-
-
-    useEffect(() => {
-        const handleNavigate = () => {
-            if (id === 1) {
-                navigate('/ajuda');
-            } else if ( id === 2) {
-                navigate('/viagens')
-            } else if (id === 3) {
-                navigate('/login')
-            }
-        }
-
-        handleNavigate();
-
-    }, [id, navigate]);
-    
-
     return (
         <React.Fragment>
             <nav className={styles.navbar}>
@@ -37,20 +16,23 @@ const Header = () => {
                         </h1>
                     </div>
                     <ul className={styles.navbarItems}>
-                        <li className={styles.navbarItem}
-                        onClick={() => setId(1)}>
-                            <FaRegCircleQuestion className={styles.navIcon} />
-                            <h3>Ajuda</h3>
+                        <li className={styles.navbarItem}>
+                            <Link to="/ajuda" className={styles.navLink}> 
+                                <FaRegCircleQuestion className={styles.navIcon} />
+                                <h3>Ajuda</h3>
+                            </Link>
                         </li>
-                        <li className={styles.navbarItem}
-                         onClick={() => setId(2)}>
-                            <FaSuitcaseRolling className={styles.navIcon} />
-                            <h3>Minhas Viagens</h3>
+                        <li className={styles.navbarItem}>
+                            <Link to="/viagens" className={styles.navLink}>
+                                <FaSuitcaseRolling className={styles.navIcon} />
+                                <h3>Minhas Viagens</h3>
+                            </Link>
                         </li>
-                        <li className={styles.navbarItem}
-                         onClick={() => setId(3)}>
-                            <FaUserCircle className={styles.navIcon} />
-                            <h3>Entrar</h3>
+                        <li className={styles.navbarItem}>
+                            <Link to="/login" className={styles.navLink}>
+                                <FaUserCircle className={styles.navIcon} />
+                                <h3>Entrar</h3>
+                            </Link>
                         </li>
                     </ul>
                 </section>
