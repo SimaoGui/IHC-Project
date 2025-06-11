@@ -10,7 +10,7 @@ import RegisterForm from "./pages/Register/Register";
 const App = () => {
 
   return (
-    <BrowserRouter basename="/IHC-Project">
+    <BrowserRouter>
       <Routes>
         <Route path="/home" element={
           <React.Fragment>
