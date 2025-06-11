@@ -1,7 +1,7 @@
 export interface IRegisterFormState {
   nome: string;
   sobrenome: string;
-  cpf: number;
+  cpf: string;
   email: string;
   senha: string;
   confirmarSenha: string;
