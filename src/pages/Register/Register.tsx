@@ -69,7 +69,7 @@ const RegisterForm = () => {
                     </div>
                     <div className={styles.formItems}>
                         <label htmlFor="cpf">CPF<span>*</span></label>
-                        <input value={cpf} onChange={(e) => setCpf(e.target.value)} type="number" placeholder='000.000.000-00' id="cpf" required/>
+                        <input value={cpf} onChange={(e) => setCpf(e.target.value)} type="text" placeholder='000.000.000-00' id="cpf" required/>
                     </div>
                     <div className={styles.formItems}>
                         <label htmlFor="email">E-mail<span>*</span></label>
