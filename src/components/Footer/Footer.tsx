@@ -47,7 +47,7 @@ const Footer = () => {
                         <h3>Assine a nossa newsletter</h3>
                         <h4>Receba promoções e dicas de viagens</h4>
                         <div>
-                            <input placeholder="Insira seu e=mail..." type="e-mail" onChange={(e) => setEmail(e.target.value)}/>
+                            <input placeholder="Insira seu e-mail..." type="e-mail" onChange={(e) => setEmail(e.target.value)}/>
                             <button onClick={handleEmail}>Assinar</button>
                         </div>
                     </div>

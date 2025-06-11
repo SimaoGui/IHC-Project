@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom"
+import { Routes, Route, Navigate, HashRouter} from "react-router-dom"
 import Homepage from "./pages/Homepage/Homepage";
 import './styles/main.scss'
 import React from "react";
@@ -10,7 +10,7 @@ import RegisterForm from "./pages/Register/Register";
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/home" element={
           <React.Fragment>
@@ -36,7 +36,7 @@ const App = () => {
 
         <Route path="*" element={<Navigate to='/home' replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
