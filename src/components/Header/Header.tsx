@@ -3,6 +3,7 @@ import styles from './Header.module.scss'
 import { FaRegCircleQuestion, FaSuitcaseRolling } from 'react-icons/fa6';
 import { FaUserCircle } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
                 <section className={styles.navTop}>
                     <div className={styles.logoDiv}>
                         <h1>
-                            <a href="/IHC-Project/home">Viagem.com</a>
+                            <Link to="/home">Viagem.com</Link>
                         </h1>
                     </div>
                     <ul className={styles.navbarItems}>

@@ -1,15 +1,16 @@
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom"
+import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom"
 import Homepage from "./pages/Homepage/Homepage";
 import './styles/main.scss'
 import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Form from "./pages/Form/Form"
+import Register from "./pages/Register/Register";
 
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/IHC-Project">
       <Routes>
         <Route path="/home" element={
           <React.Fragment>
@@ -26,7 +27,7 @@ const App = () => {
         <Route path="/register" element={
           <React.Fragment>
             <Header/>
-            <Form/>
+            <Register/>
             <Footer/>
           </React.Fragment>} />
 

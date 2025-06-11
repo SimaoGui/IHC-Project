@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styles from './Form.module.scss'
 import React, { useState } from 'react'
 
@@ -31,11 +31,11 @@ const Form = () => {
                         <input value={senha} onChange={(e) => setSenha(e.target.value)} type="password" placeholder='Insira sua senha...'/>
                     </div>
                     <div className={styles.formItemsR}>
-                        <a href="/IHC-Project/register">Cadastrar-se!</a>
+                        <Link to="/register">Cadastrar-se!</Link>
                         <a href="#">Esqueci minha senha</a>
                     </div>
                     <button type='button' className={`${styles} btn btn--primary`} onClick={handleCheck}>Logar</button>
-                    <span>Enfrentando problemas durante o login? <a href="/ajuda">ajuda!</a></span>
+                    <span>Enfrentando problemas durante o login? <Link to="/ajuda">ajuda!</Link></span>
                 </form>    
             </section>
         </React.Fragment>
